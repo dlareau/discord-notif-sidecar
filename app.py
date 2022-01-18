@@ -7,7 +7,7 @@ from datetime import datetime
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-COMMAND_PREFIX = "!"
+COMMAND_PREFIX = "hupdate!"
 DB_NAME = "/data/database.sqlite"
 MOD_DISCORD_ID = int(os.getenv('MOD_DISCORD_ID'))
 MOD_ROLES = os.getenv('MOD_ROLES').split(",")
