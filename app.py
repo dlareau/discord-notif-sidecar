@@ -8,7 +8,7 @@ from datetime import datetime
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 COMMAND_PREFIX = "!"
-DB_NAME = "database.sqlite"
+DB_NAME = "/data/database.sqlite"
 MOD_DISCORD_ID = int(os.getenv('MOD_DISCORD_ID'))
 MOD_ROLES = os.getenv('MOD_ROLES').split(",")
 
@@ -84,6 +84,6 @@ async def send_notif():
     return 'ok'
 
 create_db()
-bot.loop.create_task(app.run_task())
+bot.loop.create_task(app.run_task(host="0.0.0.0"))
 bot.run(TOKEN)
 
